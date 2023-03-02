@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Intro from "@/app/components/screens/home/Intro/Intro";
 import About from '@/app/components/screens/home/About/About';
+import Loader from '@/app/components/ui/loader/Loader';
 
 const Index = () => {
     return (
@@ -14,6 +15,7 @@ const Index = () => {
             <main>
                 <Intro />
                 <About />
+                <Loader />
             </main>
         </>
     )
