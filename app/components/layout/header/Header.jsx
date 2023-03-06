@@ -9,7 +9,9 @@ import Logo from '../../../../public/image/logo.png'
 import Language from './language/Language'
 import { Context } from '../../ui/Context/Context'
 const Header = () => {
-    const { lan } = React.useContext(Context)
+    
+    const { lan , setLan } = React.useContext(Context)
+
     return (
         <>
             <Head>

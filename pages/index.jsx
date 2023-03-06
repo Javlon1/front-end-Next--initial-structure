@@ -14,7 +14,7 @@ const Index = () => {
             </Head>
             <main>
                 <Intro />
-                <Loader />
+                {/* <Loader /> */}
             </main>
         </>
     )
