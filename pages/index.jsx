@@ -14,7 +14,6 @@ const Index = () => {
             </Head>
             <main>
                 <Intro />
-                <About />
                 <Loader />
             </main>
         </>

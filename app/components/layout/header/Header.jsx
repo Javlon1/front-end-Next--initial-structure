@@ -1,10 +1,15 @@
+import * as React from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import styles from './Header.module.scss'
 import { Info, Menu } from './headerData'
 
+import Logo from '../../../../public/image/logo.png'
+import Language from './language/Language'
+import { Context } from '../../ui/Context/Context'
 const Header = () => {
+    const { lan } = React.useContext(Context)
     return (
         <>
             <Head>
@@ -15,8 +20,8 @@ const Header = () => {
                 <div className={`${styles.container} container`}>
                     <nav className={styles.container__nav}>
                         <Link className={styles.container__nav__img} href='/'>
-                            <Image src=''
-                                width={50}
+                            <Image src={Logo}
+                                width={170}
                                 height={50}
                                 alt='logo'
                             />
@@ -24,14 +29,15 @@ const Header = () => {
                         <ul className={styles.container__nav__list}>
                             {
                                 Menu?.map((e) => (
-                                    <Link href={e.link}>
+                                    <Link key={e.id} href={e.link}>
                                         <li className={styles.container__nav__list__item}>
-                                            {e.name}
+                                            {e[`name_${lan}`]}
                                         </li>
                                     </Link>
                                 ))
                             }
                         </ul>
+                        <Language />
                     </nav>
                 </div>
             </header>

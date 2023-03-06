@@ -1,11 +1,14 @@
 import Layout from "@/app/components/layout/Layout";
 import '@/app/assets/globals.scss';
+import { Provider } from "@/app/components/ui/Context/Context";
 
 const myApp = ({ Component, pageProps }) => {
     return (
-        <Layout>
-            <Component {...pageProps} />
-        </Layout>
+        <Provider>
+            <Layout>
+                <Component {...pageProps} />
+            </Layout>
+        </Provider>
     )
 }
 
