@@ -1,9 +1,19 @@
+import * as React from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 
-
 const Intro = () => {
+
+    const [res, setRes] = React.useState([])
+
+    React.useEffect(() => {
+        fetch(`http://localhost:3000/api/info`)
+            .then((response) => response.json())
+            .then((data) => setRes(data));
+    }, [])
+
+    console.log(res);
 
     return (
         <>
@@ -14,9 +24,11 @@ const Intro = () => {
             <section>
                 <div className='container'>
                     <div >
-                        <div >
-                            <h1>Intro</h1>
-                        </div>
+                        {
+                            res?.map((e)=>(
+                                e.tel
+                            ))
+                        }
                     </div>
                 </div>
             </section>
