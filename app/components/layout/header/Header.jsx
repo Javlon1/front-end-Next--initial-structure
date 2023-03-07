@@ -8,9 +8,10 @@ import { Info, Menu } from './headerData'
 import Logo from '../../../../public/image/logo.png'
 import Language from './language/Language'
 import { Context } from '../../ui/Context/Context'
+
 const Header = () => {
-    
-    const { lan , setLan } = React.useContext(Context)
+
+    const { lan, setLan } = React.useContext(Context)
 
     return (
         <>
@@ -38,8 +39,13 @@ const Header = () => {
                                     </Link>
                                 ))
                             }
-                        </ul>
                         <Language />
+                        </ul>
+                        <button className={styles.container__nav__btn}>
+                            <Link href='/contact' className={styles.container__nav__btn__a}>
+                                Contact
+                            </Link>
+                        </button>
                     </nav>
                 </div>
             </header>

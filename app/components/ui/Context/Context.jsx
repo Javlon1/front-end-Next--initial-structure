@@ -3,7 +3,7 @@ const Context = createContext()
 
 function Provider({children}) {
 
-    const [lan, setLan] = useState('uz')
+    const [lan, setLan] = useState('ru')
     
     return (
         <Context.Provider value={{lan, setLan}}>

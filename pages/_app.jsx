@@ -3,6 +3,7 @@ import '@/app/assets/globals.scss';
 import { Provider } from "@/app/components/ui/Context/Context";
 
 const myApp = ({ Component, pageProps }) => {
+    
     return (
         <Provider>
             <Layout>
