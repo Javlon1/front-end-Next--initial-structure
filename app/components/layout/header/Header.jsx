@@ -3,7 +3,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import styles from './Header.module.scss'
-import { Info, Menu } from './headerData'
+import { Menu } from './headerData'
 
 import Logo from '../../../../public/image/logo.png'
 import Language from './language/Language'
@@ -11,7 +11,7 @@ import { Context } from '../../ui/Context/Context'
 
 const Header = () => {
 
-    const { lan, setLan } = React.useContext(Context)
+    const { lan } = React.useContext(Context)
 
     return (
         <>
@@ -24,7 +24,7 @@ const Header = () => {
                     <nav className={styles.container__nav}>
                         <Link className={styles.container__nav__img} href='/'>
                             <Image src={Logo}
-                                width={170}
+                                width={107}
                                 height={50}
                                 alt='logo'
                             />
@@ -39,7 +39,7 @@ const Header = () => {
                                     </Link>
                                 ))
                             }
-                        <Language />
+                            <Language />
                         </ul>
                         <button className={styles.container__nav__btn}>
                             <Link href='/contact' className={styles.container__nav__btn__a}>

@@ -1,13 +1,14 @@
 
+import styles from './Footer.module.scss'
+import Nav from './nav/Nav';
+import Newsletter from './newsletter/Newsletter';
 
 const Footer = () => {
+
     return (
-        <footer>
-            <div>
-                <div>
-                    <h1>Footer</h1>
-                </div>
-            </div>
+        <footer className={styles.footer}>
+            <Newsletter />
+            <Nav />
         </footer>
     )
 }
