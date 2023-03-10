@@ -59,7 +59,7 @@ const Nav = () => {
                         <ul className={styles.container__item2__list}>
                             {
                                 Menu?.map((e) => (
-                                    <li>
+                                    <li key={e.id}>
                                         <Link key={e.id} href={e.link}>
                                             <i className="bi bi-chevron-right"></i>
                                             {e[`name_${lan}`]}

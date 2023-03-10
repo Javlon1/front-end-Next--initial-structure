@@ -13,6 +13,8 @@ const Header = () => {
 
     const { lan } = React.useContext(Context)
 
+    const [fil, setFil] = React.useState(Menu[0])
+
     return (
         <>
             <Head>
@@ -33,7 +35,12 @@ const Header = () => {
                             {
                                 Menu?.map((e) => (
                                     <Link key={e.id} href={e.link}>
-                                        <li className={styles.container__nav__list__item}>
+                                        <li
+                                            onClick={() => {
+                                                setFil(e)
+                                                localStorage.setItem('menu', e)
+                                            }}
+                                            className={`${styles.container__nav__list__item} ${fil === e ? styles.active : ''}`}>
                                             {e[`name_${lan}`]}
                                         </li>
                                     </Link>

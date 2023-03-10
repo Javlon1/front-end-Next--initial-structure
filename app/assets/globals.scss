@@ -1,3 +1,5 @@
+@import '../assets/variables';
+
 * {
     margin: 0;
     padding: 0;
@@ -8,18 +10,14 @@
 
 ::-webkit-scrollbar {
     width: .5rem;
-}
+} 
 
 ::-webkit-scrollbar-track {
-    background: transparent;
-    border-top-left-radius: 1rem;
-    border-top-right-radius: 1rem;
-    border-bottom-left-radius: 1rem;
-    border-bottom-right-radius: 1rem;
+    background: $black;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: black;
+    background-color: $beige;
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
     border-bottom-left-radius: 1rem;

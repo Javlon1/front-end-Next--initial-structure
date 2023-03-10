@@ -7,7 +7,7 @@
     .container {
         display: flex;
         justify-content: space-between;
-
+        flex-wrap: wrap;
         &__item1 {
             width: 30%;
 
