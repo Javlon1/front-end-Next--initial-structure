@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import styles from './Intro.module.scss'
+import Me from '@/public/image/me.jpg'
 import { Context } from '@/app/components/ui/Context/Context'
 
 const Intro = () => {
@@ -34,9 +35,13 @@ const Intro = () => {
                     </div>
 
                     <div className={styles.container__right}>
-                        <p className={styles.container__right__img}>
-                            Index-Intro
-                        </p>
+                        <Image 
+                            className={styles.container__right__img} 
+                            src={Me}
+                            alt='intro'
+                            priority
+                        
+                        />
                     </div>
 
                 </div>

@@ -3,7 +3,7 @@
 .intro {
     margin-top: 100px;
     background-color: $intro-bc;
-    height: 80vh;
+    padding-bottom: 9rem;
 
     .container {
         display: flex;
@@ -65,14 +65,30 @@
         &__right{
             width: 50%;
             &__img{
-                text-align: center;
-                margin-left: 150px;
-                margin-top: 100px;
+                position: relative;
+                top: 80px;
+                z-index: 10;
                 color: #e0e0e0;
-                width: 320px;
-                height: 411px;
-                border: 2px solid $beige;
+                width: 450px;
+                height: 600px;
+                border: .6rem solid $beige;
+                padding: 1rem;
+                background-color: #373535;
+                animation: banner-animation 10s infinite linear;
             }
         }
+    }
+}
+
+
+@keyframes banner-animation {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(0, -50px);
+    }
+    100% {
+        transform: translate(0, 0);
     }
 }

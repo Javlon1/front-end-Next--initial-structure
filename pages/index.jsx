@@ -3,6 +3,9 @@ import Head from 'next/head'
 import Intro from "@/app/components/screens/home/Intro/Intro";
 import About from '@/app/components/screens/home/About/About';
 import Loader from '@/app/components/ui/loader/Loader';
+import Team from '@/app/components/screens/home/team/Team';
+import Owner from '@/app/components/screens/home/owner/Owner';
+import Contact from '@/app/components/screens/home/contact/Contact';
 
 const Index = () => {
     return (
@@ -19,6 +22,9 @@ const Index = () => {
             <main>
                 <Intro />
                 <About />
+                <Owner />
+                <Team />
+                <Contact />
             </main>
         </>
     )

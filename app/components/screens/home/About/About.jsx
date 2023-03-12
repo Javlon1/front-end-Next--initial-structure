@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import styles from './About.module.scss'
 import Counter from './counter/Counter'
-import Me from '../../../../../public/image/me.jpg'
+import Me from '@/public/image/me.jpg'
 import { Inner } from './HaboutData'
 
 
