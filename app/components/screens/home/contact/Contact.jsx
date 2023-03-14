@@ -6,6 +6,9 @@ import { Location } from './contactData'
 import BcLoc from '@/public/image/bcloc.png'
 
 const Contact = () => {
+    const formReg = (e) => {
+        console.log('ok');
+    }
     return (
         <>
             <Head>
@@ -45,7 +48,7 @@ const Contact = () => {
                             }
                         </ul>
                     </div>
-                    <form className={styles.container__form} action="">
+                    <form onSubmit={formReg} className={styles.container__form} action="#" >
                         <input className={styles.container__form__inp} type="text" placeholder='Your Full Name' />
                         <input className={styles.container__form__inp} type="email" placeholder='Your Email' />
                         <input className={styles.container__form__inp} type="number" placeholder='Your Phone' />
