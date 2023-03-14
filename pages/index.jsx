@@ -6,6 +6,7 @@ import Loader from '@/app/components/ui/loader/Loader';
 import Team from '@/app/components/screens/home/team/Team';
 import Owner from '@/app/components/screens/home/owner/Owner';
 import Contact from '@/app/components/screens/home/contact/Contact';
+import Blog from '@/app/components/screens/home/blog/Blog';
 
 const Index = () => {
     return (
@@ -25,6 +26,7 @@ const Index = () => {
                 <Owner />
                 <Team />
                 <Contact />
+                <Blog />
             </main>
         </>
     )
